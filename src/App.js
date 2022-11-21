@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './components/Login';
+import Register from './components/Register';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css'
 
 
 function App() {
@@ -9,10 +11,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Login />} />
-          {/* <Route path='/register' element={<Register/>}/> */}
+          <Route path='/Register' element={<Register/>}/>
       </Routes>
       </BrowserRouter>
-    </div>
+      </div>
   );
 }
 

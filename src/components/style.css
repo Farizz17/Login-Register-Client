@@ -1,0 +1,17 @@
+#boxreg {
+    border: 5px solid black;
+    margin: 50px;
+    width: 1000px;
+    height: 610px;
+    position: absolute;
+    background-color: white;
+}
+
+#boxlog {
+    border: 5px solid black;
+    margin: 50px;
+    width: 1000px;
+    height: 530px;
+    position: absolute;
+    background-color: white;
+}
