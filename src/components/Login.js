@@ -8,7 +8,7 @@ function Login() {
     const [password, setPassword] = useState('');
 
     const login = () => {
-
+        console.log (username, password);
     }
     // State Usernaname, Login & Password
 
