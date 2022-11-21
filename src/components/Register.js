@@ -1,6 +1,9 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './style.css';
+import Axios from "axios";
+
+Axios.defaults.withCredentials = true;
 
 function Register() {
 
@@ -28,8 +31,19 @@ function Register() {
             setWrongpass('Please enter your password!')
             setWronguser('')
         }
+
+        else {
+            Axios.post("http://localhost:3001/register", {
+                username: username,
+                password: password,
+                name: name,
+            }).then((response) => {
+                console.log(response);
+            });
+        }
         // Cek Username & Password
-    }
+        Navigate('/');
+    };
     // State Usernaname, Login & Password
 
     return ( 

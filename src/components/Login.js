@@ -1,6 +1,9 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './style.css';
+import Axios from "axios";
+
+Axios.defaults.withCredentials = true;
 
 function Login() {
 
@@ -9,6 +12,8 @@ function Login() {
     const [password, setPassword] = useState('');
     const [wronguser, setWronguser] = useState('');
     const [wrongpass, setWrongpass] = useState('');
+    const [status, setStatus] = useState('');
+    let navigate = useNavigate();
 
     const login = () => {
         // console.log (username, password);
@@ -22,9 +27,33 @@ function Login() {
             setWrongpass('Please enter your password!')
             setWronguser('')
         }
+
+        else {
+            Axios.post("http://localhost:3001/login", {
+                username: username,
+                password: password,
+            }).then((response) => {
+                if (response.data.message) {
+                    setStatus(response.data.message);
+                }
+                else {
+                    sessionStorage.setItem('token', response.data);
+                    Navigate('/dashboard');
+                }
+            });
+        }
         // Cek Username & Password
     }
     // State Usernaname, Login & Password
+
+    useEffect(() => {
+        if (sessionStorage.getItem("token") === null) {
+            Navigate('/');
+        }
+        else {
+            Navigate('/dashboard');
+        }
+    }, [navigate]);
 
     return ( 
         <div id='boxlog'>
