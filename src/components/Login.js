@@ -38,7 +38,7 @@ function Login() {
                 }
                 else {
                     sessionStorage.setItem('token', response.data);
-                    navigate('/Dashboard');
+                    navigate('/dashboard');
                 }
             });
         }
@@ -51,7 +51,7 @@ function Login() {
             navigate('/');
         }
         else {
-            navigate('/Dashboard');
+            navigate('/dashboard');
         }
     }, [navigate]);
 
