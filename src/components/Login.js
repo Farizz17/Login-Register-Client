@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './style.css';
-import Axios from "axios";
+// import Axios from "axios";
 
-Axios.defaults.withCredentials = true;
+// Axios.defaults.withCredentials = true;
 
 function Login() {
 
@@ -12,8 +12,8 @@ function Login() {
     const [password, setPassword] = useState('');
     const [wronguser, setWronguser] = useState('');
     const [wrongpass, setWrongpass] = useState('');
-    const [status, setStatus] = useState('');
-    let navigate = useNavigate();
+    // const [status, setStatus] = useState('');
+    // let navigate = useNavigate();
 
     const login = () => {
         // console.log (username, password);
@@ -29,31 +29,31 @@ function Login() {
         }
 
         else {
-            Axios.post("http://localhost:3001/login", {
-                username: username,
-                password: password,
-            }).then((response) => {
-                if (response.data.message) {
-                    setStatus(response.data.message);
-                }
-                else {
-                    sessionStorage.setItem('token', response.data);
-                    Navigate('/dashboard');
-                }
-            });
+            // Axios.post("http://localhost:3001/login", {
+            //     username: username,
+            //     password: password,
+            // }).then((response) => {
+            //     if (response.data.message) {
+            //         setStatus(response.data.message);
+            //     }
+            //     else {
+            //         sessionStorage.setItem('token', response.data);
+            //         Navigate('/dashboard');
+            //     }
+            // });
         }
         // Cek Username & Password
     }
     // State Usernaname, Login & Password
 
-    useEffect(() => {
-        if (sessionStorage.getItem("token") === null) {
-            Navigate('/');
-        }
-        else {
-            Navigate('/dashboard');
-        }
-    }, [navigate]);
+    // useEffect(() => {
+    //     if (sessionStorage.getItem("token") === null) {
+    //         Navigate('/');
+    //     }
+    //     else {
+    //         Navigate('/dashboard');
+    //     }
+    // }, [navigate]);
 
     return ( 
         <div id='boxlog'>
@@ -66,13 +66,13 @@ function Login() {
                 <div className='form-group mt-3'>
                     <label className=''>Username</label>
                     <input className='form-control' type='text' onChange={(e) => { setUsername(e.target.value) }}></input>
-                    <b className='text-danger'>{wronguser}</b>
+                    <b id='wronguserlog' className='text-danger'>{wronguser}</b>
                 </div>
        
                 <div className='form-group mt-3'>
                     <label className=''>Password</label>
                     <input className='form-control' type='password' onChange={(e) => { setPassword(e.target.value) }}></input>
-                     <b className='text-danger'>{wrongpass}</b>
+                     <b id='wrongpasslog' className='text-danger'>{wrongpass}</b>
                 </div>
              
                 <div className='form-group'>

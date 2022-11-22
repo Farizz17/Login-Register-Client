@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Link, Navigate} from 'react-router-dom';
+import { Link, Navigate, useNavigate} from 'react-router-dom';
 import './style.css';
-import Axios from "axios";
+// import Axios from "axios";
 
-Axios.defaults.withCredentials = true;
+// Axios.defaults.withCredentials = true;
 
 function Register() {
 
@@ -14,6 +14,7 @@ function Register() {
     const [wrongname, setWrongname] = useState('');
     const [wronguser, setWronguser] = useState('');
     const [wrongpass, setWrongpass] = useState('');
+    // let Navigate = useNavigate();
 
     const login = () => {
         // console.log (username, password);
@@ -25,6 +26,7 @@ function Register() {
 
         else if (username === '') {
             setWronguser('Please enter your username!')
+            setWrongname('')
         }
         
         else if (password === '') {
@@ -33,16 +35,18 @@ function Register() {
         }
 
         else {
-            Axios.post("http://localhost:3001/register", {
-                username: username,
-                password: password,
-                name: name,
-            }).then((response) => {
-                console.log(response);
-            });
+            // Axios.post("http://localhost:3001/register", {
+            //     username: username,
+            //     password: password,
+            //     name: name,
+            // }).then((response) => {
+            //     console.log(response);
+            // });
+            console.log(username, password, name);
         }
         // Cek Username & Password
-        Navigate('/');
+
+        // Navigate('/');
     };
     // State Usernaname, Login & Password
 
@@ -57,19 +61,19 @@ function Register() {
                 <div className='form-group mt-3'>
                     <label className=''>Name</label>
                     <input className='form-control' type='text' onChange={(e) => { setName(e.target.value) }}></input>
-                    <b className='text-danger'>{wrongname}</b>
+                    <b id='wrongnamereg' className='text-danger'>{wrongname}</b>
                 </div>
          
                 <div className='form-group mt-3'>
                     <label className=''>Username</label>
                     <input className='form-control' type='text' onChange={(e) => { setUsername(e.target.value) }}></input>
-                    <b className='text-danger'>{wronguser}</b>
+                    <b id='wronguserreg' className='text-danger'>{wronguser}</b>
                 </div>
        
                 <div className='form-group mt-3'>
                     <label className=''>Password</label>
                     <input className='form-control' type='password' onChange={(e) => { setPassword(e.target.value) }}></input>
-                     <b className='text-danger'>{wrongpass}</b>
+                    <b id='wrongpassreg' className='text-danger'>{wrongpass}</b>
                 </div>
              
                 <div className='form-group'>
