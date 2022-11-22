@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Link, Navigate, useNavigate} from 'react-router-dom';
 import './style.css';
-// import Axios from "axios";
+import Axios from "axios";
 
-// Axios.defaults.withCredentials = true;
+Axios.defaults.withCredentials = true;
 
 function Register() {
 
@@ -14,9 +14,9 @@ function Register() {
     const [wrongname, setWrongname] = useState('');
     const [wronguser, setWronguser] = useState('');
     const [wrongpass, setWrongpass] = useState('');
-    // let Navigate = useNavigate();
+    let Navigate = useNavigate();
 
-    const login = () => {
+    const register = () => {
         // console.log (username, password);
         
         // Cek Username & Password
@@ -35,18 +35,17 @@ function Register() {
         }
 
         else {
-            // Axios.post("http://localhost:3001/register", {
-            //     username: username,
-            //     password: password,
-            //     name: name,
-            // }).then((response) => {
-            //     console.log(response);
-            // });
-            console.log(username, password, name);
+            Axios.post("http://localhost:3001/register", {
+                username: username,
+                password: password,
+                name: name,
+            });
+
+            console.log(name, username, password);
         }
         // Cek Username & Password
 
-        // Navigate('/');
+        Navigate('/');
     };
     // State Usernaname, Login & Password
 
@@ -77,7 +76,7 @@ function Register() {
                 </div>
              
                 <div className='form-group'>
-                    <button className='btn btn-primary mt-4 w-100' onClick={login}><b>Register</b></button>
+                    <button className='btn btn-primary mt-4 w-100' onClick={register}><b>Register</b></button>
                 </div>
 
                  <p className='text-muted mt-2 text-center'>
