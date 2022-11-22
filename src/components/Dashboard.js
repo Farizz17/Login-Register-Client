@@ -55,7 +55,7 @@ function Dashboard() {
                         Harapannya dengan pembelajaran ini, peserta  didik sudah mampu untuk membuat dan mengimplementasikan sistem <b>Login-Register</b> ini untuk keperluan pembuatan aplikasi yang lebih kompleks.
                     </blockquote>
 
-                    <img src={Bg} width='500px'/>
+                    <img src={Bg} width='400px'/>
 
                 </div>
             </div>
