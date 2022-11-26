@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './style.css';
 import Axios from "axios";
+import Welcome from './Welcome';
 
 Axios.defaults.withCredentials = true;
 
@@ -79,7 +80,7 @@ function Login() {
                     <button className='btn btn-warning mt-4 w-100' onClick={login}><b>Log In</b></button>
                 </div>
 
-                 <p className='text-light mt-2 text-center'>
+                 <p className='text-light mt-1 text-center'>
                     <Link to='/Register'><b>Forgotten Password?</b></Link>
                 </p>
 
