@@ -51,40 +51,40 @@ function Register() {
 
     return ( 
         <div id='boxreg'>
-            <h1 className='text-primary text-center mt-3'><b>Welcome To RPL Website</b></h1>
+            <h1 className='text-light text-center mt-3'><b>Welcome To RPL Website</b></h1>
             <div className='container py-5'>
-                <h1 className='text-primary'><b>Register Form</b></h1>
-                <p className='text-dark'>Please Register to Authentication First!</p>
+                <h1 className='text-light'><b>Register Form</b></h1>
+                <p className='text-light'>Please Register to Authentication First!</p>
                 <hr />
 
                 <div className='form-group mt-3'>
-                    <label className=''>Name</label>
+                    <label className='text-light'>Name</label>
                     <input className='form-control' type='text' onChange={(e) => { setName(e.target.value) }}></input>
                     <b id='wrongnamereg' className='text-danger'>{wrongname}</b>
                 </div>
          
                 <div className='form-group mt-3'>
-                    <label className=''>Username</label>
+                    <label className='text-light'>Username</label>
                     <input className='form-control' type='text' onChange={(e) => { setUsername(e.target.value) }}></input>
                     <b id='wronguserreg' className='text-danger'>{wronguser}</b>
                 </div>
        
                 <div className='form-group mt-3'>
-                    <label className=''>Password</label>
+                    <label className='text-light'>Password</label>
                     <input className='form-control' type='password' onChange={(e) => { setPassword(e.target.value) }}></input>
                     <b id='wrongpassreg' className='text-danger'>{wrongpass}</b>
                 </div>
              
                 <div className='form-group'>
-                    <button className='btn btn-primary mt-4 w-100' onClick={register}><b>Register</b></button>
+                    <button className='btn btn-warning mt-4 w-100' onClick={register}><b>Register</b></button>
                 </div>
 
                  <p className='text-muted mt-2 text-center'>
-                    <input type='checkbox'></input> <b className='text-primary'>Remember me</b>
+                    <input type='checkbox'></input> <b className='text-light'>Remember me</b>
                 </p>
 
-                <p className='text-muted mt-2 text-center'>
-                    <b>Have an account?</b> <Link to='/'><b>Login</b></Link>
+                <p className='text-light mt-2 text-center'>
+                    <b>Have an account?</b> <Link to='/'><b className=''>Login</b></Link>
                 </p>
             </div>
         </div>

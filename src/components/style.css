@@ -1,17 +1,22 @@
 #boxreg {
-    border: 5px solid black;
+    border: 5px solid white;
     margin: 50px;
     width: 800px;
     height: 615px;
     position: absolute;
-    background-color: white;
+    background-color: transparent;
 }
 
 #boxlog {
-    border: 5px solid black;
+    border: 5px solid white;
     margin: 50px;
     width: 800px;
     height: 540px;
     position: absolute;
-    background-color: white;
+    background-color: transparent;
+}
+
+#body{
+    background: url(./images/17\ kanan.png);
+    background-size: cover;
 }

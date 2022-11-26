@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Khalid from './images/khalid.jpeg';
+// import Khalid from './images/khalid.jpeg';
 import { Link } from 'react-router-dom';
 
 import jwt_decode from "jwt-decode";
@@ -56,6 +56,7 @@ function Dashboard() {
             
             <div className="container-fluid bg-light">
                 <div className="container py-5">
+                    <br/>
                     <h3 className="text-center">Selamat Datang <u>{username}</u> Di Halaman Dashboard</h3>
                     <br/><br/>
                     Selamat Datang, <u><b>{username}</b></u> !
@@ -75,9 +76,9 @@ function Dashboard() {
                             <br/>
                             Program Keahlian : Pengembangan Perangkat Lunak dan Gim 2021/2024
                             <br />
-                            SMKS Taruna Persada Dumai
+                            Sekolah : SMKS Taruna Persada Dumai
                             <br/><br/>
-                            Bapak Eko Saputra, A.Md
+                            Ketua Jurusan : Bapak Eko Saputra, A.Md
                         </b>
                     </p>
 

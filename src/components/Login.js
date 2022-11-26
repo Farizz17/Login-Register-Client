@@ -57,33 +57,33 @@ function Login() {
 
     return ( 
         <div id='boxlog'>
-            <h1 className='text-primary text-center mt-3'><b>Welcome To RPL Website</b></h1>
+            <h1 className='text-light text-center mt-3'><b>Welcome To RPL Website</b></h1>
             <div className='container py-5'>
-                <h1 className='text-primary'><b>Login Form</b></h1>
-                <p className='text-dark'>Please Login to Authentication First!</p>
+                <h1 className='text-light'><b>Login Form</b></h1>
+                <p className='text-light'>Please Login to Authentication First!</p>
                 <hr />
          
                 <div className='form-group mt-3'>
-                    <label className=''>Username</label>
+                    <label className='text-light'>Username</label>
                     <input className='form-control' type='text' onChange={(e) => { setUsername(e.target.value) }}></input>
                     <b id='wronguserlog' className='text-danger'>{wronguser}</b>
                 </div>
        
                 <div className='form-group mt-3'>
-                    <label className=''>Password</label>
+                    <label className='text-light'>Password</label>
                     <input className='form-control' type='password' onChange={(e) => { setPassword(e.target.value) }}></input>
                      <b id='wrongpasslog' className='text-danger'>{wrongpass}</b>
                 </div>
              
                 <div className='form-group'>
-                    <button className='btn btn-primary mt-4 w-100' onClick={login}><b>Log In</b></button>
+                    <button className='btn btn-warning mt-4 w-100' onClick={login}><b>Log In</b></button>
                 </div>
 
-                 <p className='text-muted mt-2 text-center'>
+                 <p className='text-light mt-2 text-center'>
                     <Link to='/Register'><b>Forgotten Password?</b></Link>
                 </p>
 
-                <p className='text-muted mt-2 text-center'>
+                <p className='text-light mt-2 text-center'>
                     <b>Not have an account?</b> <Link to='/Register'><b>Create New Account</b></Link>
                 </p>
             </div>
