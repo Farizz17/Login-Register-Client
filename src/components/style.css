@@ -1,19 +1,53 @@
 #boxreg {
-    border: 5px solid white;
+    /* border: 5px solid black; */
     margin: 50px;
     width: 800px;
-    height: 615px;
+    height: 569px;
+    margin-left: 330px;
     position: absolute;
-    background-color: black;
+    background-color:transparent;
+    box-shadow: 3px 3px black;
+    background: url(./images/desktop.jpg);
+    background-size: cover;
+    border-radius: 40px;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+#btnjdl{
+    text-decoration: none;
 }
 
 #boxlog {
-    border: 5px solid white;
+    /* border: 5px solid white; */
     margin: 50px;
     width: 800px;
-    height: 540px;
+    height: 569px;
+    margin-left: 330px;
     position: absolute;
-    background-color: black;
+    background-color: transparent;
+    box-shadow: 3px 3px black;
+    background: url(./images/desktop.jpg);
+    background-size: cover;
+    border-radius: 40px;
+    /* text-decoration: none; */
+}
+
+#dashboard{
+    position: absolute;
+    /* border: 5px solid black; */
+}
+
+Link {
+    text-decoration: none;
+}
+
+#dashboardnav{
+    /* border: 5px solid black; */
+}
+
+.forget:hover{
+    cursor: pointer;
 }
 
 .my {
@@ -23,6 +57,28 @@
 
 .sql {
     color: orange;
+}
+
+.formGroup input {
+    border: none;
+    width: 75%;
+    border-bottom: 2px solid white;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+}
+
+
+input:focus {
+    /* outline: none; */
+    border: none;
+    border-bottom: 2px solid rgb(91, 243, 131);
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
 }
 
 #bgjdl {
@@ -60,6 +116,7 @@
 }
 
 #body{
-    background: url(./images/911.jpg);
+    background: url(./images/Coding.jpg);
+    /* background-color: #61DBFB; */
     background-size: cover;
 }

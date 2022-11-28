@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import Khalid from './images/khalid.jpeg';
 import { Link } from 'react-router-dom';
+import './style.css';
 
 import jwt_decode from "jwt-decode";
 
@@ -9,6 +10,8 @@ function Dashboard() {
 
     let navigate = useNavigate();
     var username;
+    var nama;
+    var pass;
     
     if (sessionStorage.getItem('token') === null) {
         username = '';
@@ -17,6 +20,8 @@ function Dashboard() {
         var token = sessionStorage.getItem('token');
         var decoded = jwt_decode(token);
         username = decoded.username;
+        nama = decoded.name;
+        pass = decoded.password;
     }
 
     const logout = () => {
@@ -35,7 +40,7 @@ function Dashboard() {
 
     return ( 
         <>
-            <nav className="navbar navbar-expand-lg bg-light shadow">
+            <nav id="dashboardnav" className="navbar navbar-expand-lg bg-light shadow">
                 <div className="container">
                     <h3 className="text-dark">Dashboard RPL Website</h3>
                     <div className="">
@@ -54,18 +59,18 @@ function Dashboard() {
                 </div>
             </nav>
             
-            <div className="container-fluid bg-light">
+            <div id="dashboard" className="container-fluid bg-light mt-3">
                 <div className="container py-5">
                     <br/>
-                    <h3 className="text-center">Selamat Datang <u>{username}</u> Di Halaman Dashboard</h3>
+                    <h3 className="text-center">Selamat Datang, <u>{username}</u> Di Halaman Dashboard</h3>
                     <br/><br/>
-                    Selamat Datang, <u><b>{username}</b></u> !
+                    Selamat Datang, <u><b>{nama}</b></u> !
                     <p>Ini adalah halaman dashboard implementasi <b>Login</b> dan <b>Register</b> menggunakan <b>ReactJS-ExpressJS-MySQL</b> menggunakan <b>JWT Token</b>.</p>
                     <blockquote>
                         Harapannya dengan pembelajaran ini, peserta  didik sudah mampu untuk membuat dan mengimplementasikan sistem <b>Login-Register</b> ini untuk keperluan pembuatan aplikasi yang lebih kompleks.
                     </blockquote>
                     <p>
-                        Terimakasih kami ucapkan kepada guru kejuruan kami, tanpa arahan dan bimbingannya, kami tidak dapat mampu untuk membuat berbagai desain dan website seperti ini.
+                        Terimakasih kami ucapkan kepada guru kejuruan kami, tanpa arahan dan bimbingannya, kami tidak dapat untuk membuat berbagai desain website dan pemrograman lainnya.
                         <br />
                             <p className="ms-5">- Pengembangan Perangkat Lunak dan Gim.</p>
                     </p>
@@ -78,7 +83,7 @@ function Dashboard() {
                             <br />
                             Sekolah : SMKS Taruna Persada Dumai
                             <br/><br/>
-                            Ketua Jurusan : Bapak Eko Saputra, A.Md
+                            Guru kejuruan : Bapak Eko Saputra, A.Md.
                         </b>
                     </p>
 

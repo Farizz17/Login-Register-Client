@@ -51,28 +51,32 @@ function Register() {
 
     return ( 
         <div id='boxreg'>
-            <h1 className='text-light text-center mt-3'><b>Welcome To RPL Website</b></h1>
+            {/* <span id='jdlbtn'>
+        <Link to='/Register' class="signUpBtn">DAFTAR</Link>
+          <Link to='/' class="loginBtn">MASUK</Link>
+            </span>  */}
+            <h1 className='text-dark text-center mt-3'><b>Welcome To RPL Website</b></h1>
             <div className='container py-5'>
-                <h1 className='text-light'><b>Register Form</b></h1>
-                <p className='text-light'>Please Register to Authentication First!</p>
+                <h1 className='text-dark'><b>Register Form</b></h1>
+                <p className='text-dark'>Please Register to Authentication First!</p>
                 <hr />
 
                 <div className='form-group mt-3'>
-                    <label className='text-light'>Name</label>
-                    <input className='form-control' type='text' onChange={(e) => { setName(e.target.value) }}></input>
-                    <b id='wrongnamereg' className='text-danger'>{wrongname}</b>
+                    {/* <label className='text-light'>Name</label> */}
+                    <input placeholder='Name' className='form-control' type='text' onChange={(e) => { setName(e.target.value) }}></input>
+                    <b id='input' className='text-danger'>{wrongname}</b>
                 </div>
          
                 <div className='form-group mt-3'>
-                    <label className='text-light'>Username</label>
-                    <input className='form-control' type='text' onChange={(e) => { setUsername(e.target.value) }}></input>
-                    <b id='wronguserreg' className='text-danger'>{wronguser}</b>
+                    {/* <label className='text-light'>Username</label> */}
+                    <input placeholder='Username' className='form-control' type='text' onChange={(e) => { setUsername(e.target.value) }}></input>
+                    <b id='input' className='text-danger'>{wronguser}</b>
                 </div>
        
                 <div className='form-group mt-3'>
-                    <label className='text-light'>Password</label>
-                    <input className='form-control' type='password' onChange={(e) => { setPassword(e.target.value) }}></input>
-                    <b id='wrongpassreg' className='text-danger'>{wrongpass}</b>
+                    {/* <label className='text-light'>Password</label> */}
+                    <input placeholder='Password' className='form-control' type='password' onChange={(e) => { setPassword(e.target.value) }}></input>
+                    <b id='input' className='text-danger'>{wrongpass}</b>
                 </div>
              
                 <div className='form-group'>
@@ -84,7 +88,7 @@ function Register() {
                 </p>
 
                 <p className='text-light mt-2 text-center'>
-                    <b>Have an account?</b> <Link to='/'><b className=''>Login</b></Link>
+                    <b>Have an account?</b> <Link to='/'><b id='Loginbutton' className='text-light'>Login</b></Link>
                 </p>
             </div>
         </div>

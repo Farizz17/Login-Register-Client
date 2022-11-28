@@ -58,21 +58,25 @@ function Login() {
 
     return ( 
         <div id='boxlog'>
-            <h1 className='text-light text-center mt-3'><b>Welcome To RPL Website</b></h1>
+            {/* <div id='jdl' class="btnjdl">
+          <Link to='/Register' class="signUpBtn">DAFTAR</Link>
+          <Link to='/' class="loginBtn">MASUK</Link>
+        </div> */}
+            <h1 className='text-dark text-center mt-3'><b>Welcome To RPL Website</b></h1>
             <div className='container py-5'>
-                <h1 className='text-light'><b>Login Form</b></h1>
-                <p className='text-light'>Please Login to Authentication First!</p>
+                <h1 className='text-dark'><b>Login Form</b></h1>
+                <p className='text-dark'>Please Login to Authentication First!</p>
                 <hr />
          
                 <div className='form-group mt-3'>
-                    <label className='text-light'>Username</label>
-                    <input className='form-control' type='text' onChange={(e) => { setUsername(e.target.value) }}></input>
+                    {/* <label className='text-light'>Username</label> */}
+                    <input placeholder='Username' className='form-control' type='text' onChange={(e) => { setUsername(e.target.value) }}></input>
                     <b id='wronguserlog' className='text-danger'>{wronguser}</b>
                 </div>
        
                 <div className='form-group mt-3'>
-                    <label className='text-light'>Password</label>
-                    <input className='form-control' type='password' onChange={(e) => { setPassword(e.target.value) }}></input>
+                    {/* <label className='text-light'>Password</label> */}
+                    <input placeholder='Password' className='form-control' type='password' onChange={(e) => { setPassword(e.target.value) }}></input>
                      <b id='wrongpasslog' className='text-danger'>{wrongpass}</b>
                 </div>
              
@@ -81,11 +85,11 @@ function Login() {
                 </div>
 
                  <p className='text-light mt-1 text-center'>
-                    <Link to='/Register'><b>Forgotten Password?</b></Link>
+                    <label className=''><b className='text-light'>Forgotten Password?</b></label>
                 </p>
-
+        <br/><br/>
                 <p className='text-light mt-2 text-center'>
-                    <b>Not have an account?</b> <Link to='/Register'><b>Create New Account</b></Link>
+                    <b>Not have an account?</b> <Link to='/Register'><b id='Registerbutton' className='text-light'>Create New Account</b></Link>
                 </p>
             </div>
         </div>
