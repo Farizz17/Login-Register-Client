@@ -4,7 +4,7 @@
     width: 800px;
     height: 615px;
     position: absolute;
-    background-color: transparent;
+    background-color: black;
 }
 
 #boxlog {
@@ -13,7 +13,7 @@
     width: 800px;
     height: 540px;
     position: absolute;
-    background-color: transparent;
+    background-color: black;
 }
 
 .my {
@@ -60,6 +60,6 @@
 }
 
 #body{
-    background: url(./images/17\ kanan.png);
+    background: url(./images/911.jpg);
     background-size: cover;
 }
